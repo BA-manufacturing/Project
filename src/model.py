@@ -21,6 +21,11 @@ from .paths import ARTIFACTS
 CONFIGS = {
     "elec_04": dict(fg_thr=12),      # 20 이면 어두운 결함 2장이 마스크 밖으로 잘림
     "elec_05": dict(fg_thr=12),
+
+    "mech_02": dict(top=0.05),
+    "mech_04": dict(top=0.10),
+    "mech_07": dict(top=0.10),
+    "med_08":  dict(top=0.10), 
 }
 
 
