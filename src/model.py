@@ -19,8 +19,11 @@ from .paths import ARTIFACTS
 # 카테고리별 옵션. 각자 자기 카테고리 줄만 고칠 것. 없는 카테고리는 Model 의 기본값을 씀.
 # 고친 뒤에는 그 카테고리를 다시 학습해야 반영됨 (main.py train --categories ...).
 CONFIGS = {
-    "elec_04": dict(fg_thr=12),      # 20 이면 어두운 결함 2장이 마스크 밖으로 잘림
-    "elec_05": dict(fg_thr=12),
+    # elec·med_06,07 (장서연). top 은 val AUROC +0.03 이상일 때만 채택. 근거는 example/exp_sweep.py
+    "elec_04": dict(fg_thr=12, top=0.05),    # fg_thr: 20 이면 어두운 결함 2장이 마스크 밖으로 잘림. top: AUROC 0.667→0.715
+    "elec_05": dict(fg_thr=12, top=0.05),    # top: AUROC 0.839→0.880
+    "elec_07": dict(top=0.05),               # AUROC 0.952→0.982
+    "elec_11": dict(top=0.10),               # AUROC 0.765→0.800
 }
 
 

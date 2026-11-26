@@ -7,3 +7,4 @@ project.md
 .venv/
 .ipynb_checkpoints/
 uv.lock
+runs/
